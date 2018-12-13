@@ -6,3 +6,18 @@
      *  The method gives prefernce to return the longer matches.
      */
     private StringPart findPart(String str)
+        int n = str.length();
+        int index = masterString.indexOf(str.substring(0, n));
+        StringPart a ;
+        while(str.length() > 0){
+            if(index == -1){
+                n--;
+            }
+            else{
+                a = new StringPart(index, n);
+                return a;
+            }
+        }
+        return null;
+}
+                
