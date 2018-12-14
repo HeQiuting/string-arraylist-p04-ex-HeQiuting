@@ -6,8 +6,12 @@
      *  The method gives prefernce to return the longer matches.
      */
     private StringPart findPart(String str)
-        int n = 5;
-        int index = masterString.indexOf(str.substring(0, n));
+        if(str.length() >= 5){
+            int i = str.length();
+        }
+        else{
+            int i = 5;
+        }
         while(n > 0){
             int index = masterString.indexOf(str.substring(0, n));
             if(index == -1){
